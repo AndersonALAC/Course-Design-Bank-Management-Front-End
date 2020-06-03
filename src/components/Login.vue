@@ -65,13 +65,17 @@ export default {
       this.$refs.formRef.validate(async valid => {
         if (valid) {
           // const result = await this.$http.post('', this.loginForm);// need a back end interface here
-          const {data: res} = await this.$http.post('', this.loginForm);// data -> res
-          console.log(res);
+          // const {data: res} = await this.$http.post('', this.loginForm);// data -> res
+          // console.log(res);
           this.$message({
             message: 'Success!',
             center: true,
             type: 'success'
           });
+
+          // storage token
+          // window.sessionStorage.setItem('token', res.data.token);
+          this.$router.push('/home')
         } else {
           console.log("submit error!");
           this.$message({

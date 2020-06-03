@@ -13,6 +13,7 @@
       >
         <el-form-item prop="username">
           <el-input
+            prefix-icon="el-icon-user"
             v-model="loginForm.username"
             placeholder="Username"
           ></el-input>
@@ -20,6 +21,7 @@
         <el-form-item prop="password">
           <el-input
             v-model="loginForm.password"
+            prefix-icon="el-icon-lock"
             placeholder="Password"
             show-password
           ></el-input>
@@ -34,6 +36,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
@@ -121,7 +124,7 @@ export default {
   .buttons {
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, 80%);
   }
 }
 </style>

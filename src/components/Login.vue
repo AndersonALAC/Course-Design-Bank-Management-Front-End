@@ -1,13 +1,8 @@
 <template>
-    <div>
-        登录组件
-    </div>
+  <div>This is the login page</div>
 </template>
-
 <script>
-
+export default {};
 </script>
 
-<style>
-
-</style>
+<style lang="less" scoped></style>

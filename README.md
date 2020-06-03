@@ -1,4 +1,5 @@
-# front
+# Bank Management System - Front
+Front end of a bank management system, written with vue
 
 ## Project setup
 ```

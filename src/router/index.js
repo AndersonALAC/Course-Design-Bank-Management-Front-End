@@ -7,12 +7,22 @@ import admin from '../components/User/User.vue';
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes: [
-    { path: "/", redirect: "/login" },
-    { path: "/login", component: login },
-    { path: "/home", component: user },
-    {path: "/admin", component: admin}
-  ],
+  routes: [{ 
+    path: "/", 
+    redirect: "/login" 
+  },
+  { 
+    path: "/login", 
+    component: login 
+  },
+  { 
+    path: "/home", 
+    component: user 
+  },
+  {
+    path: "/admin", 
+    component: admin
+  }],
 });
 
 router.beforeEach((to, from, next) => {

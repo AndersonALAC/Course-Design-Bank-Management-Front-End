@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import login from "../components/Login.vue";
-import user from "../components/User.vue"
-import admin from '../components/Admin.vue';
+import user from "../components/Admin/Admin.vue"
+import admin from '../components/User/User.vue';
 
 Vue.use(VueRouter);
 

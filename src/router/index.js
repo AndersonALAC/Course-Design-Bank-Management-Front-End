@@ -111,7 +111,7 @@ export const asyncRoutes = [
       }
     ]
   },
-  
+
   {
     path: '/info',
     component: Layout,
@@ -166,7 +166,7 @@ export const asyncRoutes = [
       }
     ]
   },
-  
+
   {
     path: '/icon',
     component: Layout,

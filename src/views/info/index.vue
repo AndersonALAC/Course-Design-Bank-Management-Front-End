@@ -1,13 +1,9 @@
 <template>
-  <div>this is info</div>
+  <div class="app-container">this is info
+    
+  </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
-<style>
+<style lang="scss" scoped>
 
 </style>

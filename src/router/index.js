@@ -87,6 +87,45 @@ export const constantRoutes = [
  */
 export const asyncRoutes = [
   {
+    path: '/loan',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/loan/index'),
+        name: 'Loan',
+        meta: { title: 'Loan Management', icon: 'money', noCache: true }
+      }
+    ]
+  },
+
+  {
+    path: '/card',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/card/index'),
+        name: 'Card',
+        meta: { title: 'Card Management', icon: 'list', noCache: true }
+      }
+    ]
+  },
+  
+  {
+    path: '/info',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/info/index'),
+        name: 'Info',
+        meta: { title: 'Information', icon: 'user', noCache: true }
+      }
+    ]
+  },
+
+  {
     path: '/permission',
     component: Layout,
     redirect: '/permission/page',
@@ -127,7 +166,7 @@ export const asyncRoutes = [
       }
     ]
   },
-
+  
   {
     path: '/icon',
     component: Layout,

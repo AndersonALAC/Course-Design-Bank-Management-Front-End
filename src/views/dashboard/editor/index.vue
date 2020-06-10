@@ -1,31 +1,26 @@
 <template>
   <div class="dashboard-editor-container">
+    <panel-group @handleSetLineChartData="handleSetLineChartData" />
     <div class=" clearfix">
-      <pan-thumb :image="avatar" style="float: left">
-        Your roles:
-        <span v-for="item in roles" :key="item" class="pan-info-roles">{{ item }}</span>
-      </pan-thumb>
       <div class="info-container">
         <span class="display_name">{{ name }}</span>
         <span style="font-size:20px;padding-top:20px;display:inline-block;">Editor's Dashboard</span>
       </div>
-    </div>
-    <div>
-      <img :src="emptyGif" class="emptyGif">
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import PanThumb from '@/components/PanThumb'
+import PanelGroup from './components/PanelGroup'
 
 export default {
   name: 'DashboardEditor',
-  components: { PanThumb },
+  components: {
+    PanelGroup
+  },
   data() {
     return {
-      emptyGif: 'https://wpimg.wallstcn.com/0e03b7da-db9e-4819-ba10-9016ddfdaed3'
     }
   },
   computed: {
@@ -39,12 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .emptyGif {
-    display: block;
-    width: 45%;
-    margin: 0 auto;
-  }
-
   .dashboard-editor-container {
     background-color: #e3e3e3;
     min-height: 100vh;
@@ -57,7 +46,7 @@ export default {
     }
     .info-container {
       position: relative;
-      margin-left: 190px;
+      margin-left: 50px;
       height: 150px;
       line-height: 200px;
       .display_name {
